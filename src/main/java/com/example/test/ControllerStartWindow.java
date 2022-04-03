@@ -16,6 +16,7 @@ public class ControllerStartWindow {
     private static String URL_INSTAGRAM_NAVIGATION;
 
 
+
     public static String getAccountName() {
         return ACCOUNT_NAME;
     }

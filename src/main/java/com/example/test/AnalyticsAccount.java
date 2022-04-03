@@ -39,15 +39,14 @@ public class AnalyticsAccount {
     }
 
 
-    public static void ImageProfile ()  throws Exception {
-        String URL = ControllerStartWindow.getUrlInstagramNavigation();
+    public static void ImageProfile (String URL, String path)  throws Exception {
         System.setProperty("webdriver.chrome.driver","Selenium\\chromedriver.exe");
         ChromeDriver driver = new ChromeDriver();
         driver.get(URL);
         Thread.sleep(3000);
         WebElement webElement = driver.findElement(By.tagName("img"));
         String newURL = webElement.getAttribute("src");
-        downloadFiles(newURL, "profileAvatar.jpg");
+        downloadFiles(newURL, path);
         driver.close();
     }
 

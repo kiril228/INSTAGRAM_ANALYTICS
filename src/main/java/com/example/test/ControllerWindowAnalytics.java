@@ -37,8 +37,7 @@ public class ControllerWindowAnalytics {
 
     @FXML
     void initialize()  {
-        //BUTTON
-
+        //BACK BUTTON
         backButton.setOnAction(actionEvent -> {
             backButton.getScene().getWindow().hide();
             FXMLLoader fxmlLoader = new FXMLLoader();
@@ -72,7 +71,7 @@ public class ControllerWindowAnalytics {
         //IMAGE VIEW
         executorService.execute(() -> {
             try {
-                AnalyticsAccount.ImageProfile();
+                AnalyticsAccount.ImageProfile(ControllerStartWindow.getUrlInstagramNavigation(), "profileAvatar.jpg");
                 File file = new File("profileAvatar.jpg");
                 String localUrl = file.toURI().toURL().toString();
                 Image image = new Image(localUrl);
