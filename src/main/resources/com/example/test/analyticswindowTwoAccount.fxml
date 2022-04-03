@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #10109c;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test.ControllerWindowAnalyticsTwoAccount">
+    <children>
+        <AnchorPane layoutY="76.0" prefHeight="324.0" prefWidth="700.0" style="-fx-background-color: #11a3bd;">
+            <children>
+                <Button fx:id="backCompare" layoutX="375.0" layoutY="269.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="136.0" style="-fx-background-color: #11a3bd;" text="BACK" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Ebrima Bold" size="18.0" />
+                    </font>
+                </Button>
+            <TextField fx:id="nickNameAccount1" layoutX="14.0" layoutY="6.0" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: #11a3bd;" />
+            <TextField fx:id="nickNameAccount2" layoutX="528.0" layoutY="6.0" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: #11a3bd;" />
+            <Button fx:id="backToMenu" layoutX="511.0" layoutY="276.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="177.0" style="-fx-background-color: #11a3bd;" text=" BACK TO MENU" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="18.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="imageAccount1" fitHeight="150.0" fitWidth="150.0" layoutX="19.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imageAccount2" fitHeight="150.0" fitWidth="150.0" layoutX="533.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true" />
+            <TextField fx:id="posts1" layoutX="20.0" layoutY="216.0" style="-fx-background-color: #11a3bd;" />
+            <TextField fx:id="sub1" layoutX="20.0" layoutY="250.0" style="-fx-background-color: #11a3bd;" />
+            <TextField fx:id="posts2" layoutX="534.0" layoutY="216.0" style="-fx-background-color: #11a3bd;" />
+            <TextField fx:id="sub2" layoutX="534.0" layoutY="250.0" style="-fx-background-color: #11a3bd;" />
+            <TextField fx:id="followers1" layoutX="174.0" layoutY="216.0" style="-fx-background-color: #11a3bd;" />
+            <TextField fx:id="followers2" layoutX="369.0" layoutY="216.0" style="-fx-background-color: #11a3bd;" />
+            </children>
+        </AnchorPane>
+        <Label layoutX="170.0" layoutY="-1.0" prefHeight="77.0" prefWidth="380.0" text="INSTAGRAM ANALYTICS" textFill="WHITE" textOverrun="CLIP">
+            <font>
+                <Font name="Maiandra GD" size="33.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

@@ -76,7 +76,7 @@ public class ControllerMenuComparisonOfTwoAccounts {
                 URL_INSTAGRAM_NAVIGATION_2 = "https://instanavigation.com/ru/profile/" + ACCOUNT_NAME_2;
                 compareAccounts.getScene().getWindow().hide();
                 FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("/com/example/test/"));
+                fxmlLoader.setLocation(getClass().getResource("/com/example/test/analyticswindowTwoAccount.fxml"));
                 try {
                     fxmlLoader.load();
                 } catch (Exception e) {
@@ -98,7 +98,7 @@ public class ControllerMenuComparisonOfTwoAccounts {
                 Parent parent = fxmlLoader.getRoot();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(parent));
-                stage.showAndWait();
+                stage.show();
             }
 
         });
@@ -107,7 +107,7 @@ public class ControllerMenuComparisonOfTwoAccounts {
         backToMenuButton.setOnAction(actionEvent -> {
             backToMenuButton.getScene().getWindow().hide();
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("/com/example/test/hello-view.fxml"));
+            fxmlLoader.setLocation(getClass().getResource("/com/example/test/startWindow.fxml"));
             try {
                 fxmlLoader.load();
             } catch (Exception e){

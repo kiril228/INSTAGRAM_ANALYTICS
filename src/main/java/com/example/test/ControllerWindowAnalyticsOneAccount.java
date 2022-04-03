@@ -17,7 +17,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-public class ControllerWindowAnalytics {
+public class ControllerWindowAnalyticsOneAccount {
     private static String PREV_ACCOUNT_NAME = "";
     private static String PREV_TEXT = "";
     @FXML
@@ -41,7 +41,7 @@ public class ControllerWindowAnalytics {
         backButton.setOnAction(actionEvent -> {
             backButton.getScene().getWindow().hide();
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("/com/example/test/hello-view.fxml"));
+            fxmlLoader.setLocation(getClass().getResource("/com/example/test/startWindow.fxml"));
             try {
                 fxmlLoader.load();
             } catch (Exception e){
