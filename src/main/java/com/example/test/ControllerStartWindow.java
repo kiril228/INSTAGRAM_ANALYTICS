@@ -15,6 +15,7 @@ public class ControllerStartWindow {
     private static String URL;
     private static String URL_INSTAGRAM_NAVIGATION;
 
+
     public static String getAccountName() {
         return ACCOUNT_NAME;
     }
@@ -35,50 +36,69 @@ public class ControllerStartWindow {
     private TextField nickNameInstagramAccountTextField;
 
     @FXML
+    public Button CompareAccountButton;
+
+    @FXML
     private Button viewAnalyticsButton;
 
     @FXML
     void initialize() {
 
+        //ANALYTICS ONE ACCOUNT
+        viewAnalyticsButton.setOnAction(actionEvent -> {
+            ACCOUNT_NAME = nickNameInstagramAccountTextField.getText();
 
-            viewAnalyticsButton.setOnAction(actionEvent -> {
-                ACCOUNT_NAME = nickNameInstagramAccountTextField.getText();
-
-                if (!ACCOUNT_NAME.equals("")){
-                    URL = "https://insta-stories.online/ru/posts/" + ACCOUNT_NAME;
-                    URL_INSTAGRAM_NAVIGATION = "https://instanavigation.com/ru/profile/" + ACCOUNT_NAME;
+            if (!ACCOUNT_NAME.equals("")) {
+                URL = "https://insta-stories.online/ru/posts/" + ACCOUNT_NAME;
+                URL_INSTAGRAM_NAVIGATION = "https://instanavigation.com/ru/profile/" + ACCOUNT_NAME;
                 viewAnalyticsButton.getScene().getWindow().hide();
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("/com/example/test/analyticswindow.fxml"));
                 try {
                     fxmlLoader.load();
-                } catch (Exception e){
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
                 Parent parent = fxmlLoader.getRoot();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(parent));
-                stage.showAndWait();}
-                else {
-                    viewAnalyticsButton.getScene().getWindow();
-                    FXMLLoader fxmlLoader = new FXMLLoader();
-                    fxmlLoader.setLocation(getClass().getResource("/com/example/test/pleaswriteaccount.fxml"));
-                    try {
-                        fxmlLoader.load();
-                    } catch (Exception e){
-                        e.printStackTrace();
-                    }
-                    Parent parent = fxmlLoader.getRoot();
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(parent));
-                    stage.showAndWait();
+                stage.showAndWait();
+            } else {
+                viewAnalyticsButton.getScene().getWindow();
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("/com/example/test/pleaswriteaccount.fxml"));
+                try {
+                    fxmlLoader.load();
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
+                Parent parent = fxmlLoader.getRoot();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(parent));
+                stage.showAndWait();
+            }
 
+        });
+
+
+
+        //COMPARE ACCOUNTS
+        CompareAccountButton.setOnAction(actionEvent -> {
+            viewAnalyticsButton.getScene().getWindow().hide();
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(getClass().getResource("/com/example/test/comparisonOfTwoAccounts.fxml"));
+            try {
+                fxmlLoader.load();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            Parent parent = fxmlLoader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(parent));
+            stage.showAndWait();
             });
 
 
 
-
     }
-
 }

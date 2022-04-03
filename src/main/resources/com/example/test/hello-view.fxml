@@ -6,21 +6,25 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #99C505;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test.ControllerStartWindow">
    <children>
       <AnchorPane layoutY="76.0" prefHeight="324.0" prefWidth="700.0" style="-fx-background-color: #809E1B;">
          <children>
-            <Button fx:id="viewAnalyticsButton" cache="true" layoutX="243.0" layoutY="100.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="216.0" style="-fx-background-color: #809E1B;" text="VIEW ANALYTICS" textAlignment="CENTER" textFill="#ff4040" AnchorPane.leftAnchor="243.0" AnchorPane.rightAnchor="242.0">
+            <Button fx:id="viewAnalyticsButton" cache="true" layoutX="102.0" layoutY="112.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="216.0" style="-fx-background-color: #809E1B;" text="VIEW ANALYTICS" textAlignment="CENTER" textFill="#ff4040" AnchorPane.leftAnchor="102.0" AnchorPane.rightAnchor="383.0">
                <font>
                   <Font name="Maiandra GD" size="20.0" />
                </font>
             </Button>
-            <TextField fx:id="nickNameInstagramAccountTextField" layoutX="183.0" layoutY="44.0" prefHeight="46.0" prefWidth="335.0" promptText="NickName Instagram Account" style="-fx-border-color: silver; -fx-border-radius: 5; -fx-background-color: #809E1B;" styleClass="-">
+            <TextField fx:id="nickNameInstagramAccountTextField" layoutX="42.0" layoutY="36.0" prefHeight="46.0" prefWidth="335.0" promptText="NickName Instagram Account" style="-fx-border-color: silver; -fx-border-radius: 5; -fx-background-color: #809E1B;" styleClass="-">
                <font>
                   <Font name="Yandex-UI-Icons-Private" size="22.0" />
                </font>
             </TextField>
+            <Button fx:id="CompareAccountButton" cache="true" layoutX="383.0" layoutY="210.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="283.0" style="-fx-background-color: #809E1B;" text="COMPARE ACCOUNT" textAlignment="CENTER" textFill="#030202">
+               <font>
+                  <Font name="Maiandra GD" size="20.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
       <Label layoutX="170.0" layoutY="-1.0" prefHeight="77.0" prefWidth="380.0" text="INSTAGRAM ANALYTICS" textFill="#0d0d0d" textOverrun="CLIP">

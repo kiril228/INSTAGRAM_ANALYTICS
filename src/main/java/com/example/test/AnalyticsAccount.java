@@ -39,24 +39,16 @@ public class AnalyticsAccount {
     }
 
 
-    public static void ImageProfile ()  {
+    public static void ImageProfile ()  throws Exception {
         String URL = ControllerStartWindow.getUrlInstagramNavigation();
         System.setProperty("webdriver.chrome.driver","Selenium\\chromedriver.exe");
         ChromeDriver driver = new ChromeDriver();
-            driver.get(URL);
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        driver.get(URL);
+        Thread.sleep(3000);
         WebElement webElement = driver.findElement(By.tagName("img"));
-            String newURL = webElement.getAttribute("src");
-
-            downloadFiles(newURL, "profileAvatar.jpg");
+        String newURL = webElement.getAttribute("src");
+        downloadFiles(newURL, "profileAvatar.jpg");
         driver.close();
-
-
-
     }
 
     private static void downloadFiles(String URL, String path) {
