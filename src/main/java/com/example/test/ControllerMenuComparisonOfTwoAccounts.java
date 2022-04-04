@@ -85,7 +85,7 @@ public class ControllerMenuComparisonOfTwoAccounts {
                 Parent parent = fxmlLoader.getRoot();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(parent));
-                stage.showAndWait();
+                stage.show();
             } else {
                 compareAccounts.getScene().getWindow();
                 FXMLLoader fxmlLoader = new FXMLLoader();

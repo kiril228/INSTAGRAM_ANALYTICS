@@ -167,7 +167,7 @@ public class ControllerWindowAnalyticsTwoAccount {
         executorService.execute(() -> {
             followers1.setEditable(false);
             try {
-                String follower1 = ("Подписчиков:" + (analyticsAccount1.sub(ControllerMenuComparisonOfTwoAccounts.getUrl1())));
+                String follower1 = ("Подписчиков:" + (analyticsAccount1.followers(ControllerMenuComparisonOfTwoAccounts.getUrl1())));
                 followers1.setText(follower1);
 
             } catch (Exception e) {
@@ -178,7 +178,7 @@ public class ControllerWindowAnalyticsTwoAccount {
         executorService.execute(() -> {
             followers2.setEditable(false);
             try {
-                String follower2 = ("Подписчиков:" + (analyticsAccount1.sub(ControllerMenuComparisonOfTwoAccounts.getUrl2())));
+                String follower2 = ("Подписчиков:" + (analyticsAccount1.followers(ControllerMenuComparisonOfTwoAccounts.getUrl2())));
                 followers2.setText(follower2);
 
             } catch (Exception e) {
@@ -190,7 +190,7 @@ public class ControllerWindowAnalyticsTwoAccount {
         executorService.execute(() -> {
             posts1.setEditable(false);
             try {
-                String post1 = ("Постов:" + (analyticsAccount1.sub(ControllerMenuComparisonOfTwoAccounts.getUrl1())));
+                String post1 = ("Постов:" + (analyticsAccount1.posts(ControllerMenuComparisonOfTwoAccounts.getUrl1())));
                 posts1.setText(post1);
 
             } catch (Exception e) {
@@ -205,7 +205,7 @@ public class ControllerWindowAnalyticsTwoAccount {
             public void run() {
                 posts2.setEditable(false);
                 try {
-                    String post2 = ("Постов:" + (analyticsAccount1.sub(ControllerMenuComparisonOfTwoAccounts.getUrl2())));
+                    String post2 = ("Постов:" + (analyticsAccount1.posts(ControllerMenuComparisonOfTwoAccounts.getUrl2())));
                     posts2.setText(post2);
 
                 } catch (Exception e) {
