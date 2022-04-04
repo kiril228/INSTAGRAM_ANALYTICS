@@ -11,19 +11,19 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class ControllerMenuComparisonOfTwoAccounts {
-    private String ACCOUNT_NAME_1;
-    private String ACCOUNT_NAME_2;
+    private static String ACCOUNT_NAME_1;
+    private static String ACCOUNT_NAME_2;
     private static String URL_1;
     private static String URL_INSTAGRAM_NAVIGATION_1;
     private static String URL_2;
     private static String URL_INSTAGRAM_NAVIGATION_2;
 
 
-    public String getACCOUNT_NAME_1() {
+    public static String getACCOUNT_NAME_1() {
         return ACCOUNT_NAME_1;
     }
 
-    public String getACCOUNT_NAME_2() {
+    public static String getACCOUNT_NAME_2() {
         return ACCOUNT_NAME_2;
     }
 
